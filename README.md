@@ -1,6 +1,6 @@
-# program-dash
+# Urho dashboard
 
-A [re-frame](https://github.com/Day8/re-frame) application designed to ... well, that part is up to you.
+Dashboard for iot devices and jaunasallu.
 
 ## Development Mode
 
@@ -27,18 +27,19 @@ lein cljsbuild once min
 
 # Google cloud
 ## Create bucket
-gsutil mb -c coldline gs://<bucketname>
+`gsutil mb -c coldline gs://<bucketname>`
 
 
 ## copy stuff to cloud
-gsutil cp -r . gs://<bucketname>
-gsutil rsync -R . gs://<bucketname>
+`gsutil cp -r . gs://<bucketname>`
+
+`gsutil rsync -R . gs://<bucketname>`
 
 ## make it public
-gsutil iam ch allUsers:objectViewer gs://<bucketname>
+`gsutil iam ch allUsers:objectViewer gs://<bucketname>`
 
 ## Make web site index file
-gsutil web set -m index.html gs://<bucketname>
+`gsutil web set -m index.html gs://<bucketname>`
 
 
 
